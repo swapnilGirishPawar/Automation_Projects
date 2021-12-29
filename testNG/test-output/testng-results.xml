@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-12-16T06:42:43Z" name="Default suite" finished-at="2021-12-16T06:43:05Z" duration-ms="21380">
+    <groups>
+    </groups>
+    <test started-at="2021-12-16T06:42:43Z" name="Default test" finished-at="2021-12-16T06:43:05Z" duration-ms="21380">
+      <class name="testNG.grid">
+        <test-method signature="gridTest()[pri:0, instance:testNG.grid@41a0aa7d]" started-at="2021-12-16T06:42:43Z" name="gridTest" finished-at="2021-12-16T06:43:05Z" duration-ms="21346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gridTest -->
+      </class> <!-- testNG.grid -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
