@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 29 10:40:01 IST 2021</td>
+<td>Started on:</td><td>Fri Dec 31 16:35:20 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>50 seconds (50462 ms)</td>
+<tr><td>Total time:</td><td>133 seconds (133860 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='flipkart1.demoClass.loginToAddToCart()'><b>loginToAddToCart</b><br>Test class: flipkart1.demoClass</td>
+<td title='flipkart1.demoClass.emptyCart()'><b>emptyCart</b><br>Test class: flipkart1.demoClass</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;DESKTOP-NR3C8QD&apos;, ip: &apos;192.168.43.83&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., databaseEnabled: false, desired: {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., deviceName: M2007J20CI, platformName: android}, deviceApiLevel: 29, deviceManufacturer: Xiaomi, deviceModel: M2007J20CI, deviceName: 8aa5ba96, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: 8aa5ba96, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 91, takesScreenshot: true, viewportRect: {height: 2088, left: 0, top: 91, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
-*** Element info: {Using=-android uiautomator, value=new UiScrollable(new UiSelector()).scrollIntoView(text(&quot;English&quot;))}
+Capabilities {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., databaseEnabled: false, desired: {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., deviceName: POCO F1, platformName: android}, deviceApiLevel: 29, deviceManufacturer: Xiaomi, deviceModel: POCO F1, deviceName: 996805b0, deviceScreenDensity: 440, deviceScreenSize: 1080x2246, deviceUDID: 996805b0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 89, takesScreenshot: true, viewportRect: {height: 1938, left: 0, top: 89, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 6a928a41-7a3b-4de7-a555-7cdb6e806cbc
+*** Element info: {Using=xpath, value=//*[contains(text(),&apos;Remove&apos;)]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -102,8 +102,16 @@ Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
-	at flipkart1.demoClass.loginToAddToCart(demoClass.java:39)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at flipkart1.demoClass.emptyCart(demoClass.java:109)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,15 +137,15 @@ Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2137642385", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2137642385'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+</pre></div><a href='#' onClick='toggleBox("stack-trace1713605602", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1713605602'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;DESKTOP-NR3C8QD&apos;, ip: &apos;192.168.43.83&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., databaseEnabled: false, desired: {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., deviceName: M2007J20CI, platformName: android}, deviceApiLevel: 29, deviceManufacturer: Xiaomi, deviceModel: M2007J20CI, deviceName: 8aa5ba96, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: 8aa5ba96, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 91, takesScreenshot: true, viewportRect: {height: 2088, left: 0, top: 91, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
-*** Element info: {Using=-android uiautomator, value=new UiScrollable(new UiSelector()).scrollIntoView(text(&quot;English&quot;))}
+Capabilities {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., databaseEnabled: false, desired: {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., deviceName: POCO F1, platformName: android}, deviceApiLevel: 29, deviceManufacturer: Xiaomi, deviceModel: POCO F1, deviceName: 996805b0, deviceScreenDensity: 440, deviceScreenSize: 1080x2246, deviceUDID: 996805b0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 89, takesScreenshot: true, viewportRect: {height: 1938, left: 0, top: 89, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 6a928a41-7a3b-4de7-a555-7cdb6e806cbc
+*** Element info: {Using=xpath, value=//*[contains(text(),&apos;Remove&apos;)]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -156,8 +164,16 @@ Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
-	at flipkart1.demoClass.loginToAddToCart(demoClass.java:39)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at flipkart1.demoClass.emptyCart(demoClass.java:109)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -184,8 +200,31 @@ Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>31</td>
-<td>flipkart1.demoClass@5032714f</td></tr>
+<td>33</td>
+<td>flipkart1.demoClass@402c4085</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='flipkart1.demoClass.TC01_Login()'><b>TC01_Login</b><br>Test class: flipkart1.demoClass</td>
+<td></td>
+<td>18</td>
+<td>flipkart1.demoClass@402c4085</td></tr>
+<tr>
+<td title='flipkart1.demoClass.TC02_SearchForProduct()'><b>TC02_SearchForProduct</b><br>Test class: flipkart1.demoClass</td>
+<td></td>
+<td>38</td>
+<td>flipkart1.demoClass@402c4085</td></tr>
+<tr>
+<td title='flipkart1.demoClass.TC03_addToCart()'><b>TC03_addToCart</b><br>Test class: flipkart1.demoClass</td>
+<td></td>
+<td>10</td>
+<td>flipkart1.demoClass@402c4085</td></tr>
 </table><p>
 </body>
 </html>

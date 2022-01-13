@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 public class parralelTesting {
 	public WebDriver driver;
 	@Parameters("mybrowser")
+	
 	@BeforeTest
 	public void BT(String mybrowser)
 	{

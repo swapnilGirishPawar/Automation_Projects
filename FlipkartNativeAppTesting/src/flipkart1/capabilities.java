@@ -16,7 +16,7 @@ public class capabilities {
 public static AndroidDriver<AndroidElement> capability() throws MalformedURLException {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "M2007J20CI");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "POCO F1");
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
 		cap.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, "C:\\Swapnil\\Selenium\\chromedriver_win32\\chromedriver.exe");

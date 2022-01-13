@@ -5,8 +5,12 @@
     <classes>
       <class name="flipkart1.demoClass">
         <methods>
+          <include name="TC01_Login"/>
+          <include name="AT"/>
           <include name="BT"/>
-          <include name="loginToAddToCart"/>
+          <include name="emptyCart"/>
+          <include name="TC03_addToCart"/>
+          <include name="TC02_SearchForProduct"/>
         </methods>
       </class> <!-- flipkart1.demoClass -->
     </classes>

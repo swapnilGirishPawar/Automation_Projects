@@ -10,6 +10,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.SendKeysAction;
 import org.openqa.selenium.remote.server.handler.SendKeys;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -29,60 +31,98 @@ public class demoClass extends capabilities{
 		driver  = capability();
 	}
 	
-	@Test (enabled = true)
-	public void loginToAddToCart()
+	@AfterTest
+	public void AT() throws InterruptedException 
 	{
-		System.out.println("Hey there !");
+		System.out.println("All test cases passed !");
+		Thread.sleep(3000);
+		driver.closeApp();
+	}
+	
+	@Test (priority = 0)
+	public void TC01_Login()
+	{
+		System.out.println("Test Scenario 1 - User should able to login into home page and able to see search bar.");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// Not able to scroll.
-		driver.pressKey(new KeyEvent(AndroidKey.DPAD_UP));
-		TouchAction ta = new TouchAction<>(driver);
-		
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"English\"))").click();
-		
+//Page 01 - Language selection
+		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"English\"))").click();		
 		driver.findElement(By.xpath("//*[@resource-id='com.flipkart.android:id/select_btn']")).click();
+//Page 02 - Phone number popup for login
 		driver.findElement(By.xpath("//*[@text='088884 02650']")).click();
+//Page 03 - Home Page
+		WebElement searchBar = driver.findElement(By.xpath("//*[@text='Search for Products, Brands and More']"));
+		String actual = searchBar.getText();
+		String expected = "Search for Products, Brands and More";
+		//WebElement expected = driver.findElement(By.xpath("//*[@text='Search for Products, Brands and More']"));
+		Assert.assertEquals(actual, expected);
+		System.out.println("TC01_Login - Passed !");
+	}
+	
+	@Test (dependsOnMethods = "TC01_Login")
+	public void TC02_SearchForProduct() throws InterruptedException
+	{
+		System.out.println("Test Scenario 2 - User should able to search perticular product and able to see product details.");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//Page 04 - Search Bar functionality
 		driver.findElement(By.xpath("//*[@text='Search for Products, Brands and More']")).click();
 		WebElement element = driver.findElementByAccessibilityId("Search grocery products");
 		String text = "ball Pen";
 		element.sendKeys(text+"\n");
+//Page 05 - permissions popups
 		driver.findElement(By.xpath("//*[@resource-id='com.flipkart.android:id/txt_title']")).click();
 		driver.findElement(By.xpath("//*[@resource-id='com.flipkart.android:id/allow_button']")).click();
 		driver.findElement(By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']")).click();
+//Page 06 - All Products to perticular product.
 		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"FLAIR Carbonix Ball Pen\"))").click();
-		driver.findElement(By.xpath("//*[@text='ADD TO CART']")).click();
-		driver.findElementByAccessibilityId("Back Button").click();
-		driver.findElement(By.xpath("//*[@text='GO TO CART']")).click();
-		driver.findElement(By.xpath("//*[@text='Place Order']")).click();
-		
+		Thread.sleep(3000);	
+//Page 07 - Product details 
+		WebElement productName = driver.findElement(By.xpath("//*[@text='FLAIR Carbonix Ball Pen (Pack of 25, Blue)']"));
+		String actual = productName.getText();
+		String expected = "FLAIR Carbonix Ball Pen (Pack of 25, Blue)";
+		Assert.assertEquals(actual, expected);
 	}
 	
-	
-	@Test (enabled = false)
-	public void login() throws InterruptedException
+	@Test (dependsOnMethods = "TC02_SearchForProduct")
+	public void TC03_addToCart() throws InterruptedException
 	{
-//Page - 01
+		System.out.println("Test Scenario 3 - User should able to click on add to cart option and product should be added into cart");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//*[@text='ADD TO CART']")).click();
+//Page 08 - Popup
+		driver.findElementByAccessibilityId("Back Button").click();
+//Page 09 - Cart page
+		driver.findElement(By.xpath("//*[@text='GO TO CART']")).click();
 		Thread.sleep(3000);
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"English\"))").click();
-		driver.findElement(MobileBy.id("com.flipkart.android:id/select_btn")).click();
 		
-// Page - 02
-		Thread.sleep(30000);
-		driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"Phone Number\"]")).sendKeys("8888402650");
-		driver.findElement(MobileBy.id("com.flipkart.android:id/select_btn")).click();
-		
-// Page - 03
-		Thread.sleep(20000);
-		driver.findElement(By.id("com.flipkart.android:id/tv_left_cta")).click(); // resource ID
-		//driver.findElement(By.xpath("//*[@text='Use Password']")).click();
-
-// Page - 04
-		driver.findElement(MobileBy.id("com.flipkart.android:id/phone_input")).sendKeys("swapnil123");
-		driver.findElement(MobileBy.id("com.flipkart.android:id/button")).click();
-		
-// Page - 05 - Home page
-		
-		
+		//String expectedQuantity = "1";
+		//WebElement E = driver.findElement(By.xpath("//*[@text='Qty: 1']"));
+		//String actualQuantity = E.toString().substring(3);
+		//System.out.println(actualQuantity);
+		//Assert.assertEquals(expectedQuantity,actualQuantity);
 	}
+	
+	@Test (dependsOnMethods = "TC03_addToCart")
+	public void emptyCart() throws InterruptedException
+	{
+		System.out.println("Test Scenario 4 - User should able to remove product from cart and navigate to home page.");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@text='Remove']")).click();
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//*[@text='Remove']")).click();
+		driver.findElementByAccessibilityId("Back Button");
+	}
+	
+	
+	// Not working: Unable to locate element on screen.
+	@Test (enabled = false)
+	public void TC04_LogOut() throws InterruptedException
+	{
+		System.out.println("Test Scenario 4 - User should able to logout from App.");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.findElementByAccessibilityId("Back Button").click();
+		Thread.sleep(3000);
+		driver.findElementByAccessibilityId("Drawer").click();
+	}
+
 }

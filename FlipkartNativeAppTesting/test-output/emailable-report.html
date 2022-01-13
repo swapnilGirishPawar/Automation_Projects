@@ -9,18 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">50,462</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">133,860</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">flipkart1.demoClass</td><td><a href="#m0">loginToAddToCart</a></td><td rowspan="1">1640754620456</td><td rowspan="1">31734</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">flipkart1.demoClass</td><td><a href="#m0">emptyCart</a></td><td rowspan="1">1640948817064</td><td rowspan="1">33773</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">flipkart1.demoClass</td><td><a href="#m1">TC01_Login</a></td><td rowspan="1">1640948749933</td><td rowspan="1">18738</td></tr><tr class="passedeven"><td><a href="#m2">TC02_SearchForProduct</a></td><td rowspan="1">1640948768683</td><td rowspan="1">38155</td></tr><tr class="passedeven"><td><a href="#m3">TC03_addToCart</a></td><td rowspan="1">1640948806841</td><td rowspan="1">10218</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">flipkart1.demoClass#loginToAddToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+<h2>Default test</h2><h3 id="m0">flipkart1.demoClass#emptyCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;DESKTOP-NR3C8QD&apos;, ip: &apos;192.168.43.83&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., databaseEnabled: false, desired: {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., deviceName: M2007J20CI, platformName: android}, deviceApiLevel: 29, deviceManufacturer: Xiaomi, deviceModel: M2007J20CI, deviceName: 8aa5ba96, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: 8aa5ba96, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 91, takesScreenshot: true, viewportRect: {height: 2088, left: 0, top: 91, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
-*** Element info: {Using=-android uiautomator, value=new UiScrollable(new UiSelector()).scrollIntoView(text(&quot;English&quot;))}
+Capabilities {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., databaseEnabled: false, desired: {appActivity: com.flipkart.android.Splash..., appPackage: com.flipkart.android, automationName: UIAutomator2, chromedriverExecutable: C:\Swapnil\Selenium\chromed..., deviceName: POCO F1, platformName: android}, deviceApiLevel: 29, deviceManufacturer: Xiaomi, deviceModel: POCO F1, deviceName: 996805b0, deviceScreenDensity: 440, deviceScreenSize: 1080x2246, deviceUDID: 996805b0, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 89, takesScreenshot: true, viewportRect: {height: 1938, left: 0, top: 89, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 6a928a41-7a3b-4de7-a555-7cdb6e806cbc
+*** Element info: {Using=xpath, value=//*[contains(text(),&apos;Remove&apos;)]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -39,8 +39,16 @@ Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
-	at flipkart1.demoClass.loginToAddToCart(demoClass.java:39)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at flipkart1.demoClass.emptyCart(demoClass.java:109)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -67,5 +75,8 @@ Session ID: af3d404a-82c7-4e7b-ac9d-4a46e16ad2d5
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">flipkart1.demoClass#TC01_Login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">flipkart1.demoClass#TC02_SearchForProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">flipkart1.demoClass#TC03_addToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

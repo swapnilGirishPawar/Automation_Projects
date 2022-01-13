@@ -33,7 +33,7 @@ public class generalStoreTesting extends capabilities {
 	
 	@BeforeTest
 	public void bt() throws IOException, InterruptedException {
-		 driver = capability();
+		 
 	}
 	
 		
@@ -147,8 +147,10 @@ public class generalStoreTesting extends capabilities {
 		
 		
 		@Test
-		public void test5() throws InterruptedException
+		public void test5() throws InterruptedException, IOException
 		{
+			driver = capability();
+			service = startServer();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 // Page - 01
 			driver.findElementById("com.androidsample.generalstore:id/nameField").sendKeys("Niharika");
@@ -214,6 +216,7 @@ public class generalStoreTesting extends capabilities {
 	
 			// Switch to app view
 			driver.context("NATIVE_APP");
+			service.stop();
 			
 		}
 	}

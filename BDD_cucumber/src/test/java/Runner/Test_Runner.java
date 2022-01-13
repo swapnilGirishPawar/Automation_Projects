@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 	(
 		features= {"src\\test\\resources\\Login\\Login.feature"},
 		glue= {"StepDefination"},
-		dryRun= false 
+		dryRun= true
 	)
 
 public class Test_Runner {

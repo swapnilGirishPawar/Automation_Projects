@@ -2,6 +2,7 @@
 Feature: To validate Login Application
  1) Valid Case
  2) Invalid Case
+ 
  # scenario is basically to tell what are we testing
  Scenario: To test login with valid scenario
  #given is the pre-condition
@@ -13,7 +14,7 @@ Feature: To validate Login Application
  #post condition
  Then i should see the username as welcome Peter "Welcome New Automation"
  
-  Scenario: To test login with valid scenario
+ Scenario: To test login with valid scenario
  Given i should open the browser and navigate to login page of orangeHRM
  When Enter valid Name "Admin"
  And  Enter Valid password "admin123"
