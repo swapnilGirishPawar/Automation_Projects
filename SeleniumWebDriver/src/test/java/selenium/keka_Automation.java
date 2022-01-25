@@ -50,10 +50,10 @@ public class keka_Automation {
 		{
 			driver.findElement(By.xpath("//*[@name='provider']")).click();
 			Thread.sleep(2000);
-			driver.findElement(By.xpath("//*[@id='identifierId']")).sendKeys("swapnil.pawar@moolya.com");
+			driver.findElement(By.xpath("//*[@id='identifierId']")).sendKeys("Enter your Email here");
 			driver.findElement(By.xpath("//*[@class='VfPpkd-vQzf8d']")).click();
 			Thread.sleep(2000);
-			driver.findElement(By.xpath("//*[@name='password']")).sendKeys("Swapnil@123");
+			driver.findElement(By.xpath("//*[@name='password']")).sendKeys("Enter your password here");
 			driver.findElement(By.xpath("//*[@class='VfPpkd-vQzf8d']")).click();
 			Thread.sleep(6000);
 			// For clock-out
